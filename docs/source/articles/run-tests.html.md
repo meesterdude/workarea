@@ -27,6 +27,24 @@ In those situations you may want to refer to:
 * [Display Rails Test Runner Help](#display-rails-test-runner-help)
 * [Pass Arguments to Workarea Test Runners](#pass-arguments-to-workarea-test-runners)
 
+## Preparing For Running Tests
+**Note:** For OSX users running 10.15 Catalina and up, you'll want to refer to [This Article](https://coderwall.com/p/lfjoaq/persist-ulimit-settings-in-mac-os-x). 
+
+Running workarea tests can open a lot of files, and you may experience issues if your system limits are too low. Check the current limit of open files.
+
+```
+ulimit -Sn
+```
+
+If this number is small (like `256`) you can increase the limit your system uses for your current session. 
+
+```
+ulimit -n 9000
+```
+
+To persist this change for future sessions, append it to your `~/.bash_profile`, `~/.bashrc` or `~/.zshrc` file depending on your system & shell used. 
+
+
 
 ## Run All Tests
 
